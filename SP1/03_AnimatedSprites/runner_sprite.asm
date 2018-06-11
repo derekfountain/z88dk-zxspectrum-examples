@@ -1,0 +1,165 @@
+SECTION rodata_user
+
+PUBLIC _runner_f1
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._runner_f1
+	defb @00011000
+	defb @00011110
+	defb @00000000
+	defb @00010000
+	defb @00010000
+	defb @00000000
+	defb @00100000
+	defb @00011000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	
+._runner_f2
+	defb @00011000
+	defb @00011110
+	defb @00000000
+	defb @00100000
+	defb @00100000
+	defb @00000010
+	defb @00000100
+	defb @00110000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	
+._runner_f3
+	defb @00000000
+	defb @00011000
+	defb @00011110
+	defb @00000000
+	defb @00100000
+	defb @01000000
+	defb @00000000
+	defb @01100110
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	
+._runner_f4
+	defb @00011000
+	defb @00011110
+	defb @00000000
+	defb @00010000
+	defb @00100000
+	defb @00000000
+	defb @01000000
+	defb @01001100
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	
+._runner_f5
+	defb @00011000
+	defb @00011110
+	defb @00000000
+	defb @00001000
+	defb @00010000
+	defb @00000000
+	defb @00100000
+	defb @00011000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+		
+._runner_f6
+	defb @00011000
+	defb @00011110
+	defb @00000000
+	defb @00001000
+	defb @00001000
+	defb @00000010
+	defb @00000100
+	defb @00110000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+		
+._runner_f7
+	defb @00000000
+	defb @00011000
+	defb @00011110
+	defb @00000000
+	defb @00001000
+	defb @00000100
+	defb @00000000
+	defb @01100110
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+		
+._runner_f8
+	defb @00011000
+	defb @00011110
+	defb @00000000
+	defb @00010000
+	defb @00001000
+	defb @00000000
+	defb @01000000
+	defb @01001100
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	
+	
