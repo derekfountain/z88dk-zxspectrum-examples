@@ -1,0 +1,187 @@
+SECTION rodata_user
+
+PUBLIC _cross1_col1
+PUBLIC _cross1_col2	
+
+PUBLIC _cross2_col1
+PUBLIC _cross2_col2	
+
+PUBLIC _cross3_col1
+PUBLIC _cross3_col2	
+		
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._cross1_col1
+
+	defb @00000001
+	defb @00000010
+	defb @00000100
+	defb @00000100
+	defb @00000101
+	defb @00111000
+	defb @01000001
+	defb @10010010
+	defb @10001010
+	defb @01000001
+	defb @00111000
+	defb @00000100
+	defb @00000101
+	defb @00000100
+	defb @00000010
+	defb @00000001
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._cross1_col2
+
+	defb @10000000
+	defb @01000000
+	defb @00100000
+	defb @10100000
+	defb @00100000
+	defb @00011100
+	defb @10000010
+	defb @01010001
+	defb @01001001
+	defb @10000010
+	defb @00011100
+	defb @10100000
+	defb @00100000
+	defb @00100000
+	defb @01000000
+	defb @10000000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._cross2_col1
+
+	defb @00000000
+	defb @00000000
+	defb @00000001
+	defb @00000010
+	defb @00000011
+	defb @00000010
+	defb @00011100
+	defb @00100101
+	defb @00101001
+	defb @00011100
+	defb @00000011
+	defb @00000010
+	defb @00000010
+	defb @00000001
+	defb @00000000
+	defb @00000000
+	
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._cross2_col2
+
+	defb @00000000
+	defb @00000000
+	defb @10000000
+	defb @01000000
+	defb @01000000
+	defb @11000000
+	defb @00111000
+	defb @10010100
+	defb @10100100
+	defb @00111000
+	defb @01000000
+	defb @11000000
+	defb @01000000
+	defb @10000000
+	defb @00000000
+	defb @00000000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._cross3_col1
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000001
+	defb @00000000
+	defb @00000001
+	defb @00000000
+	defb @00001110
+	defb @00010100
+	defb @00000001
+	defb @00000001
+	defb @00000001
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._cross3_col2
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @10000000
+	defb @10000000
+	defb @10000000
+	defb @00101000
+	defb @01110000
+	defb @00000000
+	defb @10000000
+	defb @00000000
+	defb @10000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+				

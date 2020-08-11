@@ -1,0 +1,67 @@
+SECTION rodata_user
+
+PUBLIC _boat_col1
+PUBLIC _boat_col2	
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._boat_col1
+	defb @00000000
+	defb @00000011
+	defb @00000100
+	defb @00000011
+	defb @00000000
+	defb @00000000
+	defb @00001111
+	defb @00010000
+	defb @00001101
+	defb @00011101
+	defb @00100000
+	defb @01000000
+	defb @10000000
+	defb @11111111
+	defb @10000000
+	defb @11111111
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+
+._boat_col2
+	defb @00000000	
+	defb @11000000
+	defb @00100000
+	defb @11100000
+	defb @10100000
+	defb @10100000
+	defb @10110000
+	defb @00001000
+	defb @11010000
+	defb @11011110
+	defb @00000001
+	defb @00000010
+	defb @00000100
+	defb @11101000
+	defb @00010000
+	defb @11100000
+
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	defb @00000000
+	
