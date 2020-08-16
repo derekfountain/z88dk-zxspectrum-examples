@@ -1,3 +1,7 @@
+/*
+ * zcc +zx -vn -clib=sdcc_iy -startup=31 setup_sp1.c boat.c boat_sprite.asm -o boat -create-app
+ */
+
 #pragma output REGISTER_SP = 0xD000
 
 #include <arch/zx.h>
