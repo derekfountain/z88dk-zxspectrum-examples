@@ -1,4 +1,4 @@
-/* zcc +zx -vn -clib=sdcc_iy -startup=31 setup_sp1.c boat_struct.c boat_sprite.asm -o boat -create-app */
+/* zcc +zx -vn -clib=sdcc_iy -startup=31 setup_sp1.c boat_struct.c boat_sprite.asm -o boat_struct -create-app */
 
 #pragma output REGISTER_SP = 0xD000
 

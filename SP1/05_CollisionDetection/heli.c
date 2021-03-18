@@ -50,6 +50,13 @@ typedef struct
 
 /*
  * Characters, one helicopter, 6 moneybags and 2 bombs.
+ *
+ * For the helicopter and moneybag, the sprite's bounding box, as
+ * used for collision detection, covers the entire 16x16 sprite.
+ * That means the top left corner of the collision bounding box
+ * doubles as the sprite's x,y screen position. The bounding box
+ * for each of these sprites is maintained and updated by the code
+ * as the sprite moves.
  */
 struct
 {
@@ -65,10 +72,20 @@ struct
   uint8_t         collected;
 } moneybag[6];
 
+/*
+ * For the bomb, the sprite's bounding box is 14x14, inset into the
+ * the sprite's 16x16 size by one pixel. That means a bit of calculation
+ * is going to be required. I either store the sprite's x,y location and
+ * calculate the bounding box from it, or store the bounding box location
+ * and calculate the sprite's screen location from that. I choose the
+ * former, although in a real game it would probably be worth trying
+ * both approaches to see which is faster/smaller.
+ */
 struct
 {
   struct sp1_ss  *sprite;
-  Rect            bounding_box;
+  uint8_t         xpos;
+  uint8_t         ypos;
   uint8_t         moving;
 } bomb[2];
 
@@ -113,20 +130,18 @@ int main()
   sp1_AddColSpr(bomb[0].sprite, SP1_DRAW_MASK2,    SP1_TYPE_2BYTE, bomb_col2-bomb_col1, 0);
   sp1_AddColSpr(bomb[0].sprite, SP1_DRAW_MASK2RB,  SP1_TYPE_2BYTE, 0, 0);
 
-  bomb[0].bounding_box.x1 = (uint8_t)65; bomb[0].bounding_box.x2=bomb[0].bounding_box.x1+16;
-  bomb[0].bounding_box.y1 = (uint8_t)0;  bomb[0].bounding_box.y2=bomb[0].bounding_box.y1+16;
-  sp1_MoveSprPix(bomb[0].sprite, &full_screen, bomb_col1, bomb[0].bounding_box.x1,
-		                                          bomb[0].bounding_box.y1);
+  bomb[0].xpos = 65;
+  bomb[0].ypos = 0;
+  sp1_MoveSprPix(bomb[0].sprite, &full_screen, bomb_col1, bomb[0].xpos, bomb[0].ypos);
   bomb[0].moving = MOVING_DOWN;
 
   bomb[1].sprite = sp1_CreateSpr(SP1_DRAW_MASK2LB, SP1_TYPE_2BYTE, 3, 0, 10);
   sp1_AddColSpr(bomb[1].sprite, SP1_DRAW_MASK2,    SP1_TYPE_2BYTE, bomb_col2-bomb_col1, 0);
   sp1_AddColSpr(bomb[1].sprite, SP1_DRAW_MASK2RB,  SP1_TYPE_2BYTE, 0, 0);
 
-  bomb[1].bounding_box.x1 = (uint8_t)175; bomb[1].bounding_box.x2=bomb[1].bounding_box.x1+16;
-  bomb[1].bounding_box.y1 = (uint8_t)175; bomb[1].bounding_box.y2=bomb[1].bounding_box.y1+16;
-  sp1_MoveSprPix(bomb[1].sprite, &full_screen, bomb_col1, bomb[1].bounding_box.x1,
-		                                          bomb[1].bounding_box.y1);
+  bomb[1].xpos = 175;
+  bomb[1].ypos = 175;
+  sp1_MoveSprPix(bomb[1].sprite, &full_screen, bomb_col1, bomb[1].xpos, bomb[1].ypos);
   bomb[1].moving = MOVING_UP;
 
   zx_border( INK_BLUE );
@@ -189,21 +204,19 @@ int main()
     {
       if( bomb[i].moving == MOVING_UP )
       {
-	if( bomb[i].bounding_box.y1 == 0 )
+	if( bomb[i].ypos == 0 )
 	  bomb[i].moving=MOVING_DOWN;
 	else
-	  bomb[i].bounding_box.y1--;
+	  bomb[i].ypos--;
       }
       else
       {
-	if( bomb[i].bounding_box.y1 == 176 )
+	if( bomb[i].ypos == 176 )
 	  bomb[i].moving=MOVING_UP;
 	else
-	  bomb[i].bounding_box.y1++;
+	  bomb[i].ypos++;
       }
-      sp1_MoveSprPix(bomb[i].sprite, &full_screen, bomb_col1, bomb[i].bounding_box.x1, bomb[i].bounding_box.y1);
-      bomb[i].bounding_box.x2 = bomb[i].bounding_box.x1+16;
-      bomb[i].bounding_box.y2 = bomb[i].bounding_box.y1+16;
+      sp1_MoveSprPix(bomb[i].sprite, &full_screen, bomb_col1, bomb[i].xpos, bomb[i].ypos);
     }
 
     /*
@@ -232,9 +245,10 @@ int main()
      */
     for( i=0; i<2; i++ )
     {
-      if( ! (bomb[i].bounding_box.x1 >= heli.bounding_box.x2 || bomb[i].bounding_box.x2 <= heli.bounding_box.x1
+      Rect bomb_bounding_box = { bomb[i].xpos+1, bomb[i].ypos+1, bomb[i].xpos+14, bomb[i].ypos+14 };
+      if( ! (bomb_bounding_box.x1 >= heli.bounding_box.x2 || bomb_bounding_box.x2 <= heli.bounding_box.x1
 	     ||
-	     bomb[i].bounding_box.y1 >= heli.bounding_box.y2 || bomb[i].bounding_box.y2 <= heli.bounding_box.y1) )
+	     bomb_bounding_box.y1 >= heli.bounding_box.y2 || bomb_bounding_box.y2 <= heli.bounding_box.y1) )
       {
 	sp1_UpdateNow();
 	while(1) for(i=0;i<8;i++) zx_border(i);

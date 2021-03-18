@@ -23,7 +23,7 @@ int main()
   boat_sprite = sp1_CreateSpr(SP1_DRAW_LOAD1LB, SP1_TYPE_1BYTE, 3, 0, 0);
   sp1_AddColSpr(boat_sprite, SP1_DRAW_LOAD1, SP1_TYPE_1BYTE, boat_col2-boat_col1, 0);
   sp1_AddColSpr(boat_sprite, SP1_DRAW_LOAD1RB, SP1_TYPE_1BYTE, 0, 0);
-    sp1_UpdateNow();
+  sp1_UpdateNow();
 
   zx_border(INK_BLUE);
   
