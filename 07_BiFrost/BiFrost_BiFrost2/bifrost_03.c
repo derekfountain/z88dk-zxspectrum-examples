@@ -1,7 +1,7 @@
 /*
  * zcc +zx -vn -m -startup=31 -clib=sdcc_iy bifrost_03.c ctile.asm -o bifrost_03
- * appmake +glue -b bifrost_03 --filler 0 --clean
- * appmake +zx -b bifrost_03__.bin --org 32768 --blockname bifrost_03 -o bifrost_03.tap
+ * z88dk-appmake +glue -b bifrost_03 --filler 0 --clean
+ * z88dk-appmake +zx -b bifrost_03__.bin --org 32768 --blockname bifrost_03 -o bifrost_03.tap
  */
 
 #pragma output REGISTER_SP  = -1
