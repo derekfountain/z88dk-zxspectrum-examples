@@ -11,7 +11,7 @@ extern unsigned char runner_f1[];
 
 struct sp1_Rect full_screen = {0, 0, 32, 24};
 
-int main()
+int main( void )
 {
   struct sp1_ss  *runner_sprite;
   unsigned char   x;

@@ -28,7 +28,7 @@ arrow_state[4] = { {IN_KEY_SCANCODE_q, arrow_up,     0, -1},
                    {IN_KEY_SCANCODE_o, arrow_left,  -1,  0},
                    {IN_KEY_SCANCODE_p, arrow_right, +1,  0} };
 
-int main()
+int main( void )
 {
   struct sp1_ss  *arrow_sprite;
 
@@ -63,7 +63,7 @@ int main()
     if( y == 175+8 )
       y = 0;
     else if( y == 0 )
-      y = 175+8;
+      y = (unsigned char)(175+8);
 
     sp1_MoveSprPix(arrow_sprite, &full_screen, arrow_state[state].graphic, x, y);
     z80_delay_ms(20);

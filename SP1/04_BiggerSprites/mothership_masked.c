@@ -17,7 +17,7 @@ extern unsigned char mothership_col6[];
 
 struct sp1_Rect full_screen = {0, 0, 32, 24};
 
-int main()
+int main( void )
 {
   struct sp1_ss  *mothership_sprite;
   unsigned char x;

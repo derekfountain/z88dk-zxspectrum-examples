@@ -14,7 +14,7 @@ extern unsigned char boat_col2[];
 void setup_sp1(void);
 extern struct sp1_Rect full_screen;
 
-int main()
+int main( void )
 {
   setup_sp1();
 

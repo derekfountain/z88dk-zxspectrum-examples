@@ -1,5 +1,5 @@
 /*
- * zcc +zx -vn -m -startup=1 -clib=sdcc_iy sizeof.c -o sizeof -create-app
+ * zcc +zx -vn -m -startup=1 -clib=sdcc_iy promotion.c -o promotion -create-app
  * gcc -o promotion promotion.c
  */
 
@@ -13,7 +13,7 @@
  * the one which behaves as expected.
  */
 
-int main()
+int main( void )
 {
   volatile unsigned char test;
 

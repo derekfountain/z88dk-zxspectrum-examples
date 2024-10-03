@@ -13,7 +13,7 @@ extern unsigned char bubble_col2[];
 
 struct sp1_Rect full_screen = {0, 0, 32, 24};
 
-int main()
+int main( void )
 {
   struct sp1_ss *bubble_sprite;
   unsigned char x,y;

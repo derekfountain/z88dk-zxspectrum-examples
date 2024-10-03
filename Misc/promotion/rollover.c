@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-int main()
+int main( void )
 {
   uint8_t   test;
 

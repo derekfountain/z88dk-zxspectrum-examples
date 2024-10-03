@@ -13,7 +13,7 @@
 
 extern unsigned char ctiles[];
 
-int main()
+int main( void )
 {
   unsigned char blank_tile_index;
   unsigned char row, col;
@@ -30,7 +30,7 @@ int main()
     for(col = 1; col <= 17; col+=2)
       BIFROSTL_fillTileAttrL(row, col, INK_WHITE+(8*INK_WHITE));
 
-  BIFROSTL_setTile(0, 0, 0+BIFROSTL_STATIC);
+  BIFROSTL_setTile(0, 0, (unsigned char)(0+BIFROSTL_STATIC));
 
   BIFROSTL_start();
 

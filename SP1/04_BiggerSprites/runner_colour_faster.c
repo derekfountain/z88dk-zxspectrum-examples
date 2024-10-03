@@ -33,7 +33,7 @@ struct sp1_ap runner_colour[4] = { {SP1_AMASK_INK, INK_BLUE},
 				   {SP1_AMASK_INK, INK_BLUE},
                                  };
 
-int main()
+int main( void )
 {
   struct sp1_ss  *runner_sprite;
   unsigned char   x;

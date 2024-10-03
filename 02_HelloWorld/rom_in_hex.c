@@ -5,7 +5,7 @@
 #include <arch/zx.h>
 #include <stdio.h>
 
-int main()
+int main( void )
 {
   unsigned char * rom_addr = 0;
   int i, j;

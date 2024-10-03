@@ -4,7 +4,7 @@
 #include <input.h>
 #include <arch/zx.h>
 
-int main()
+int main( void )
 {
   /* Space, plus top bit set means CAPS */
   uint16_t break_scancode = IN_KEY_SCANCODE_SPACE | 0x8000;

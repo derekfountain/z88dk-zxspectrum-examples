@@ -46,7 +46,7 @@ struct rect {
    uint8_t y2;
 };
 
-int main()
+int main( void )
 {
   setup_sp1();
 

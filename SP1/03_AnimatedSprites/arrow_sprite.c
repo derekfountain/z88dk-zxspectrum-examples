@@ -22,7 +22,7 @@ struct
 arrow_state[] = { {IN_KEY_SCANCODE_o, arrow_left,  -1},
                   {IN_KEY_SCANCODE_p, arrow_right, +1} };
 
-int main()
+int main( void )
 {
   struct sp1_ss  *arrow_sprite;
 

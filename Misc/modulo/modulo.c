@@ -30,7 +30,7 @@ void setup_int(void)
    z80_wpoke(0xd1d2, (unsigned int)isr);
 }
 
-int main()
+int main( void )
 {
   unsigned int iterations;
   unsigned int i;

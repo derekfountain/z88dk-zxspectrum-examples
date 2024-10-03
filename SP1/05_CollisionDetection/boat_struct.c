@@ -21,7 +21,7 @@ boat_gfx_data = { boat_col1, boat_col2, 15, 10 };
 void setup_sp1(void);
 extern struct sp1_Rect full_screen;
 
-int main()
+int main( void )
 {
   setup_sp1();
 

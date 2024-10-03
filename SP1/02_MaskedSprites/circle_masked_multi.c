@@ -34,7 +34,7 @@ typedef struct
 
 CIRCLE_SPRITE circle_sprites[NUM_SPRITES];
 
-int main()
+int main( void )
 {
   unsigned char i;
 

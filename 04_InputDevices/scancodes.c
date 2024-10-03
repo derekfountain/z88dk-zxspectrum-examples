@@ -4,7 +4,7 @@
 #include <input.h>
 #include <arch/zx.h>
 
-int main()
+int main( void )
 {
   zx_cls(PAPER_WHITE);
   while( 1 ) {

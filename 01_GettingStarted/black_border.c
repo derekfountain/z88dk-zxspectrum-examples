@@ -6,7 +6,7 @@
 
 #include <arch/zx.h>
 
-int main()
+int main( void )
 {
   zx_border(INK_BLACK);
   return 0;

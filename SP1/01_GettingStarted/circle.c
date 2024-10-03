@@ -1,3 +1,7 @@
+/*
+ * zcc +zx -vn -m -startup=31 -clib=sdcc_iy circle.c circle_sprite.asm -o circle -create-app
+ */
+
 #pragma output REGISTER_SP = 0xD000
 
 #include <arch/zx.h>
@@ -5,7 +9,7 @@
 
 extern unsigned char circle[];
 
-int main()
+int main( void )
 {
   struct sp1_Rect full_screen = {0, 0, 32, 24};
   struct sp1_ss  *circle_sprite;

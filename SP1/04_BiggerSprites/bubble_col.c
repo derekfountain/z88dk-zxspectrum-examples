@@ -21,7 +21,7 @@ void initialiseColour(unsigned int count, struct sp1_cs *c)
   c->attr      = INK_BLUE;
 }
 
-int main()
+int main( void )
 {
   struct sp1_ss  *bubble_sprite;
   unsigned char x;

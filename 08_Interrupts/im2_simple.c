@@ -21,7 +21,7 @@ IM2_DEFINE_ISR(isr)
 #define TABLE_ADDR             ((void*)(TABLE_HIGH_BYTE*UI_256))
 #define JUMP_POINT             ((unsigned char*)( (unsigned int)(JUMP_POINT_HIGH_BYTE*UI_256) + JUMP_POINT_HIGH_BYTE ))
 
-int main()
+int main( void )
 {
   memset( TABLE_ADDR, JUMP_POINT_HIGH_BYTE, 257 );
 

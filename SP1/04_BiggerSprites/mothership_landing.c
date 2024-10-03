@@ -55,7 +55,7 @@ void invalidateAntenna(unsigned int count, struct sp1_update *u)
 
 struct sp1_ss  *mothership_sprite;
 
-int main()
+int main( void )
 {
   unsigned char y;
 

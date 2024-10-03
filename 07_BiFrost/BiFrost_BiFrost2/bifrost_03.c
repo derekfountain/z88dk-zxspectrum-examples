@@ -13,7 +13,7 @@
 
 extern unsigned char ctiles[];
 
-int main()
+int main( void )
 {
   unsigned char line, col;
 

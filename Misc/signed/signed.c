@@ -27,7 +27,7 @@ int8_t signed_addition(int8_t input)
   return result;
 }
 
-int main()
+int main( void )
 {
   printf("unsigned_addition() = %u\n", unsigned_addition(10));
   printf("  signed_addition() = %d\n", signed_addition(-10));

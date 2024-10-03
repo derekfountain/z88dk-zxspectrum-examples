@@ -26,7 +26,7 @@ IM2_DEFINE_ISR(isr)
 #define TABLE_ADDR             ((void*)(TABLE_HIGH_BYTE*UI_256))
 #define JUMP_POINT             ((unsigned char*)( (unsigned int)(JUMP_POINT_HIGH_BYTE*UI_256) + JUMP_POINT_HIGH_BYTE ))
 
-int main()
+int main( void )
 {
   uint16_t key_held_cycles = 0;
   uint8_t  key_was_pressed = 0;

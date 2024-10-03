@@ -38,7 +38,7 @@ struct
   uint8_t         collected;
 } diamond_hollow[6];
 
-int main()
+int main( void )
 {
   uint8_t i;
 

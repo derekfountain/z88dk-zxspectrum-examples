@@ -89,7 +89,7 @@ struct
   uint8_t         moving;
 } bomb[2];
 
-int main()
+int main( void )
 {
   uint8_t i;
 

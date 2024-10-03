@@ -5,7 +5,7 @@
 #include <arch/zx.h>
 #include <stdio.h>
 
-int main()
+int main( void )
 {
   unsigned char name[15];
 

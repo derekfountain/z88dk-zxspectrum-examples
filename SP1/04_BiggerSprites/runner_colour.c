@@ -24,7 +24,7 @@ void colourSpr(unsigned int count, struct sp1_cs *c)
   c->attr = INK_RED|PAPER_BLUE;
 }
 
-int main()
+int main( void )
 {
   struct sp1_ss  *runner_sprite;
   unsigned char   x;

@@ -3,7 +3,7 @@
 #include <arch/zx.h>
 #include <input.h>
 
-int main()
+int main( void )
 {
 
   while( 1 )

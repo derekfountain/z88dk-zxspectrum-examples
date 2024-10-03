@@ -14,7 +14,7 @@
 
 extern unsigned char ctiles[];
 
-int main()
+int main( void )
 {
   unsigned char line, col;
 
@@ -28,7 +28,7 @@ int main()
     for(col = 0; col <= 18; col++)
       BIFROSTH_fillTileAttrH(line, col, INK_WHITE+(8*INK_WHITE));
 
-  BIFROSTH_setTile(4, 4, 0+BIFROSTH_STATIC);
+  BIFROSTH_setTile(4, 4, (unsigned char)(0+BIFROSTH_STATIC));
 
   BIFROSTH_start();
 

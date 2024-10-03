@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <input.h>
 
-int main()
+int main( void )
 {
   unsigned char c;
 

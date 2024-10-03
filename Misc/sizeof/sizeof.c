@@ -1,8 +1,14 @@
 /*
  * zcc +zx -vn -m -startup=1 -clib=sdcc_iy sizeof.c -o sizeof -create-app
+ * zcc +zx sizeof.c -o sizeof -compiler=sccz80 -clib=default -lndos -create-app
  */
 
+#ifdef __SDCC
 #include <arch/zx.h>
+#else
+#include <arch/zx/spectrum.h>
+#endif
+
 #include <stdio.h>
 #include <stdint.h>
 
@@ -271,12 +277,16 @@ TEST_256,
 TEST_257,
 };
 
-int main()
+int main(void)
 {
   enum ENUM_TEST_8  ent8;
   enum ENUM_TEST_16 ent16;
 
+#ifdef __SDCC
   zx_cls(PAPER_WHITE|INK_BLUE);
+#else
+  zx_cls();
+#endif
 
   printf("sizeof(char)         = %d\n", sizeof(char));
   printf("sizeof(int)          = %d\n", sizeof(int));

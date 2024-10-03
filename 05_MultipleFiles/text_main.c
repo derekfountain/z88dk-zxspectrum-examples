@@ -6,7 +6,7 @@
 
 extern unsigned char message[];
 
-int main()
+int main( void )
 {
   printf("Message is: \"%s\"\n", message);
 

@@ -4,7 +4,7 @@
 #include <input.h>
 #include <arch/zx.h>
 
-int main()
+int main( void )
 {
   uint16_t kempston_input;
 
